@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="jquery-1.11.2.min.js"></script>
+        <script src="config.js"></script>
+        <script src="medcalendar.js"></script>
+        <script>
+            $(function()
+            {
+                $(".alt").hide();
+                nextEvent();
+                setInterval(nextEvent, 10000);
+            });
+        </script>
+    </head>
+    <body>
+        <p id="maintenance" class="alt">
+            maintenance
+        </p>
+        <p id="astro" class="alt">
+            astro
+        </p>
+    </body>
+</html>
