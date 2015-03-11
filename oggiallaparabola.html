@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>Oggi alla Parabola</title>
+  <link rel="stylesheet" href="css/style_new.css" />
+  <!--<link rel="stylesheet" href="css/table.css" />-->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/medcalendar.js"></script>
+  <script>
+      $(function()
+      {
+          //how often shell we refresh the page contents?
+          //default to 10 min.
+          var refresh_in_seconds = 600;
+          $(".observation-type").hide();
+          showCurrentEvent();
+          setInterval(showCurrentEvent, refresh_in_seconds * 1000);
+      });
+  </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container box_dim">
+    	<!--<h2 class="page-title">What's happening on 32-m Dish</h2>-->
+    	    <div id="about" class="box_dim">
+            	<span><img src="images/parab512.png"></span>
+              	<h2>Oggi alla Parabola:</h2>
+                <hr>
+                <div id="upper" class="box_dim">
+                    <div id="astro" class="observation-type">
+                    	<h3>VLBI ASTRO</h3>
+                	<img src="images/astron.jpg" style="max-width: 100%;" />
+                        <div id="obs-data-astron">
+                            <h4>
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                            </h4>
+                        </div>
+                    </div><!-- end astro -->
+                    <div id="rastron" class="observation-type">
+                    	<h3>RADIOASTRON</h3>
+                	<img src="images/astron.jpg" style="max-width: 100%;" />
+                        <div id="obs-data-astron">
+                            <h4>
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                            </h4>
+                        </div>
+                    </div><!-- end rastron -->
+                    <div id="calib" class="observation-type">
+                    	<h3>CALIBRATION</h3>
+                	<img src="images/astron.jpg" style="max-width: 100%;" />
+                        <div id="obs-data-astron">
+                            <h4>
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                            </h4>
+                        </div>
+                    </div><!-- end calib -->
+                    <div id="geo" class="observation-type">
+                    	<h3>GEO</h3>
+                	<img src="images/astron.jpg" style="max-width: 100%;" />
+                        <div id="obs-data-geo">
+                            <h4>
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                            </h4>
+                        </div>
+                    </div><!-- end geo -->
+                    <div id="maintenance" class="observation-type">
+                        <h3>MAINTENANCE</h3>
+                        <img src="images/astron.jpg" style="max-width: 100%;" />
+                        <div id="obs-data-geo">
+                            <h4>
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                                ABCDEFGHIJKLMNOPQRSTUVXYWZ-
+                            </h4>
+                        </div>
+                    </div><!-- end maintenance -->
+                </div><!-- end upper -->
+            </div><!-- end about -->
+    </div><!--end container -->
+</div><!-- fine wrapper -->
+</body>
+</html>
