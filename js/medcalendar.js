@@ -27,7 +27,7 @@ function parseEventDescription(text){
 };
 
 function showCurrentEvent(){
-    //console.debug("showCurrentEvent()");
+    console.debug("showCurrentEvent()");
     $.getJSON(
         reqUrl,
         {
@@ -38,7 +38,7 @@ function showCurrentEvent(){
             maxResults: 1
         },
         function(data){
-            //console.debug("success");
+            console.debug("success");
         })
         .done(function(data){
             first_event = data.items[0];
@@ -48,21 +48,21 @@ function showCurrentEvent(){
             if(start_datetime > now){
                 description = fallback;
              }
-            //console.debug("next event:", first_event);
-            //console.debug("start date: ", start_datetime);
-            //console.debug("now: ", now);
-            //console.debug("ID: ", description);
+            console.debug("next event:", first_event);
+            console.debug("start date: ", start_datetime);
+            console.debug("now: ", now);
+            console.debug("ID: ", description);
         })
         .fail(function(){
-            //console.debug("could not access google calendar");
+            console.debug("could not access google calendar");
             description = fallback;
         })
         .always(function(){
-            //console.debug("showing: ", description);
+            console.debug("showing: ", description);
             newVisibleElement = $("#" + description);
             if(newVisibleElement.length == 0)
             {
-                //console.debug("Cannot find element: ", description);
+                console.debug("Cannot find element: ", description);
                 newVisibleElement = $("#"  + fallback);
             }
             if(visibleElement == null)
